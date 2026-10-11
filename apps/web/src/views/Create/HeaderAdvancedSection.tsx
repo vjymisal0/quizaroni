@@ -59,13 +59,18 @@ const HeaderAdvancedSection = ({
         <AdvancedSection>
             <SimpleFlexContainer
                 onClick={onToggleExpanded}
-                style={{ cursor: 'pointer', userSelect: 'none', gap: '0.25rem' }}
+                style={{
+                    cursor: 'pointer',
+                    userSelect: 'none',
+                    gap: '0.25rem',
+                }}
             >
                 <BoldTypography>
                     {t('create.advanced', { defaultValue: 'Advanced' })}
                 </BoldTypography>
                 <IconButton
                     size="small"
+                    aria-expanded={expanded}
                     aria-label={
                         expanded
                             ? t('create.collapseAdvanced', {
